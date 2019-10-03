@@ -1,0 +1,12 @@
+/* Colors */
+$blue: #4b7bec;
+$white: #fafafa;
+$grey: #b2b2b2;
+
+@mixin blue-gradient{
+    background: linear-gradient(to right,#4b7bec, #2d98da );
+}
+
+/* utility */
+
+$rem-multiplier: 16px;
