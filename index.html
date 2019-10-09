@@ -1,42 +1,90 @@
 <!DOCTYPE html lang="da">
 <html>
-    <head>
-        <title>Admin Panel</title>
 
-        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+<head>
+    <title>Admin Panel</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
 
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap" rel="stylesheet">
 
-    <body>
-        <div class="logo">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <p>Admin Panel - MMD</p>
+    </div>
+    <div class="topbar"></div>
+
+    <div class="sidebar">
+        <ul>
+            <li>
+                <i data-feather="grid"></i>
+                <p>Dashboard</p>
+            </li>
+            <li>
+                <i data-feather="file-text"></i>
+                <p>Pages</p>
+            </li>
+            <li>
+                <i data-feather="image"></i>
+                <p>Design</p>
+            </li>
+
             <span>eCommerce</span>
-        </div>
-        <div class="topbar"></div>
+            <li>
+                <i data-feather="clipboard"></i>
+                <p>Orders</p>
+            </li>
+            <li>
+                <i data-feather="box"></i>
+                <p>Products</p>
+            </li>
+            <li>
+                <i data-feather="truck"></i>
+                <p>Shipping</p>
+            </li>
 
-        <div class="sidebar"></div>
-        <div class="content">
-            <div class="topcontent">
-                <div class="overview ov1">
-                    <h3>Income</h3>
-                    <h2>1337$</h2>
-                </div>
-                <div class="overview ov2">
-                    <p>Outcome</p>
-                </div>
-                <div class="overview ov3">
-                    <p>Something</p>
-                </div>
-                <div class="overview ov4">
-                    <p>whatwhat</p>
-                </div>
+            <span>Utility</span>
+            <li>
+                <i data-feather="users"></i>
+                <p>Users</p>
+            </li>
+            <li>
+                <i data-feather="settings"></i>
+                <p>Settings</p>
+            </li>
+
+        </ul>
+    </div>
+    <div class="content">
+        <div class="topcontent">
+            <div class="overview ov1">
+                <h3>Income</h3>
+                <h2>1337$</h2>
+            </div>
+            <div class="overview ov2">
+                <p>Outcome</p>
+            </div>
+            <div class="overview ov3">
+                <p>Something</p>
+            </div>
+            <div class="overview ov4">
+                <p>whatwhat</p>
             </div>
         </div>
+    </div>
 
 
 
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    </body>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <script>
+        feather.replace()
+    </script>
+</body>
+
 </html>
