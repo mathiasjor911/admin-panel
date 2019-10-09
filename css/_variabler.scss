@@ -9,6 +9,10 @@ $green: #6ab04c;
 $grey: #b2b2b2;
 $dark-grey: #333;
 
+@mixin l-gradient($direction,$stop1,$stop2) {
+    background: linear-gradient($direction, $stop1, $stop2);
+}
+
 /* utility */
 $font-stack: ('Titillium Web'), sans-serif;
 $rem-multiplier: 16px;

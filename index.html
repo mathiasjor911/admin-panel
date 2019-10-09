@@ -4,7 +4,7 @@
 <head>
     <title>Admin Panel</title>
 
-    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700&display=swap" rel="stylesheet">
 
@@ -17,7 +17,16 @@
     <div class="logo">
         <p>Admin Panel - MMD</p>
     </div>
-    <div class="topbar"></div>
+    <div class="topbar">
+        <div class="l-icons">
+        <i data-feather="menu"></i>
+        </div>
+        <div class="r-icons">
+            <i data-feather="bell"></i>
+            <i data-feather="inbox"></i>
+            <i class="logout" data-feather="log-out"></i>
+        </div>
+    </div>
 
     <div class="sidebar">
         <ul>
@@ -31,6 +40,10 @@
             </li>
             <li>
                 <i data-feather="image"></i>
+                <p>Media</p>
+            </li>
+            <li>
+                <i data-feather="layout"></i>
                 <p>Design</p>
             </li>
 
@@ -54,11 +67,18 @@
                 <p>Users</p>
             </li>
             <li>
+                <i data-feather="database"></i>
+                <p>Database</p>
+            </li>
+            <li>
                 <i data-feather="settings"></i>
                 <p>Settings</p>
             </li>
-
         </ul>
+        <div class="copyright">
+            <h4>MMD CMS ADMIN PANEL</h4>
+            <p>af Abdullah og Mathias</p>
+        </div>
     </div>
     <div class="content">
         <div class="topcontent">
