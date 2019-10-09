@@ -94,6 +94,8 @@ body{
             @include boxing(calc(50% - 5.3rem), 2rem);
 
             display: flex;
+            flex-direction: column;
+            box-shadow: 0 7px 6px rgba(0,0,0,0.1);
             align-items: flex-start;
 
             h2{
