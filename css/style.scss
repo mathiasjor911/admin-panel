@@ -4,6 +4,7 @@ body{
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 60px 1fr; 
+    height: 100%;
     font-size: $rem-multiplier;
     color: $dark-grey;
     font-family: $font-stack;
@@ -21,9 +22,24 @@ body{
 
 }
 
+
+
 .topbar{
-    background: $white;
-    border-bottom: 1px solid $grey;
+    background: white;
+    box-shadow: 0px -4px 16px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    .r-icons{
+        svg{
+            margin: 0 0.5rem;
+        }
+        .logout{
+            color: $red;
+        }
+    }
 }
 
 .content{
@@ -46,10 +62,25 @@ body{
 
 
 .sidebar{
-    background: $dark-blue;
+    @include l-gradient(to bottom, $dark-blue, lighten($dark-blue, 10%));
     color: $white;
-    height: 100%;
-    padding: 2rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .copyright{
+        text-align: center;
+        color: darken($white, 15%);
+
+        h4{
+            margin: 0;
+        }
+
+        p{
+            margin: 0;
+        }
+    }
 
     ul{
         list-style: none;
