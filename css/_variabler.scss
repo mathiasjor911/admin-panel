@@ -1,13 +1,14 @@
 /* Colors */
-$blue: #4b7bec;
+$dark-blue: #30336b;
+$blue: #4834d4;
+$yellow: #f9ca24;
+$red: #eb4d4b;
+$orange:#f0932b;
 $white: #fafafa;
+$green: #6ab04c;
 $grey: #b2b2b2;
 $dark-grey: #333;
 
-@mixin blue-gradient{
-    background: linear-gradient(to right,#4b7bec, #2d98da );
-}
-
 /* utility */
-$font-stack: ('Lato'), sans-serif;
+$font-stack: ('Titillium Web'), sans-serif;
 $rem-multiplier: 16px;
