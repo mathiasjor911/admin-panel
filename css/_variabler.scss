@@ -1,0 +1,13 @@
+/* Colors */
+$blue: #4b7bec;
+$white: #fafafa;
+$grey: #b2b2b2;
+$dark-grey: #333;
+
+@mixin blue-gradient{
+    background: linear-gradient(to right,#4b7bec, #2d98da );
+}
+
+/* utility */
+$font-stack: ('Lato'), sans-serif;
+$rem-multiplier: 16px;

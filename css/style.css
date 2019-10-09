@@ -1,2 +1,2 @@
-
+body{display:-ms-grid;display:grid;-ms-grid-columns:300px 1fr;grid-template-columns:300px 1fr;-ms-grid-rows:60px 1fr;grid-template-rows:60px 1fr;font-size:16px;color:#333;font-family:Lato,sans-serif}.logo{background:linear-gradient(90deg,#4b7bec,#2d98da);display:flex;align-content:center;justify-content:center}.logo span{color:#fff}.topbar{background:#fafafa;border-bottom:1px solid #b2b2b2}
 /*# sourceMappingURL=style.css.map */

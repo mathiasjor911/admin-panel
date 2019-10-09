@@ -1,0 +1,25 @@
+@import "variabler";
+
+body{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 60px 1fr; 
+    font-size: $rem-multiplier;
+    color: $dark-grey;
+    font-family: $font-stack;
+
+}
+.logo{
+    @include blue-gradient;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    span{
+        color: white
+    }
+}
+.topbar{
+    background: $white;
+    border-bottom: 1px solid $grey;
+}
