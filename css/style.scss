@@ -23,3 +23,21 @@ body{
     background: $white;
     border-bottom: 1px solid $grey;
 }
+
+.content{
+    padding: 2rem;
+
+    .topcontent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .overview{
+            width: calc(100% / 4 - 5%);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 7px 6px rgba(0,0,0,0.1);
+        }
+    }
+}
