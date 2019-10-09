@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body>
@@ -86,7 +90,7 @@
         <div class="mellemcontent">
             <div class="mellemboxing">
                 <h2>Overview</h2>
-                <div class="saleschart"></div>
+                <div class="saleschart" id="chart_div"></div>
             </div>
             <div class="mellemboxing">
                 <h2>New Orders</h2>
@@ -137,9 +141,9 @@
                     </div>
                     <div class="orderdeling">
                         <p>6</p>
-                        <h5>Leorem</h5>
-                        <h5>Leorem</h5>
-                        <h5>Leorem</h5>
+                        <h5>Kanye</h5>
+                        <h5>New Album</h5>
+                        <h5>2</h5>
                         <div class="statuspending">Pending</div>
                     </div>
                     <div class="orderdeling">
@@ -168,6 +172,32 @@
     <script>
         feather.replace()
     </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+                ['month', 'income', { role: 'style' } ],
+                ['May', 108.200, 'color: #eb4d4b'],
+                ['June', 75.190, 'color: #f0932b'],
+                ['July', 51.700, 'color: #6ab04c'],
+                ['August', 120.700, 'color: #b2b2b2'],
+                ['October', 23.000, 'color: #4834d4']
+            ]);
+
+            var options = {
+                legend: { position: "none" },
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
 </body>
 
 </html>
