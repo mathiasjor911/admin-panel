@@ -9,6 +9,14 @@ $green: #6ab04c;
 $grey: #b2b2b2;
 $dark-grey: #333;
 
+@mixin ov-bar($width, $color){
+  content: '';
+  display: block;
+  height: inherit;
+  width: $width;
+  background: $color;
+}
+
 /* utility */
 $font-stack: ('Titillium Web'), sans-serif;
 $rem-multiplier: 16px;

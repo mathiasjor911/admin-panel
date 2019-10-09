@@ -27,7 +27,8 @@ body{
 }
 
 .content{
-    padding: 2rem;
+    padding: 2rem 4rem;
+    background-color: $white;
 
     .topcontent{
         display: flex;
@@ -40,6 +41,37 @@ body{
             align-items: center;
             flex-direction: column;
             box-shadow: 0 7px 6px rgba(0,0,0,0.1);
+            background-color: white;
+            padding: 1rem;
+
+            p, h2{
+                margin: 5px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+
+        .ovbar{
+            display: block;
+            height: 3px;
+            width: 80%;
+            background: #d4d4d4;
+            margin: 0.5rem 0;
+        }
+
+        .ob1:after{
+            @include ov-bar(82%, $green)
+        }
+        .ob2:after{
+            @include ov-bar(12%, $red)
+        }
+        .ob3:after{
+            @include ov-bar(33%, $orange)
+        }
+        .ob4:after{
+            @include ov-bar(47%, $blue)
         }
     }
 }
