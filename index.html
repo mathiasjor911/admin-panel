@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 </head>
 
 <body>
@@ -82,18 +86,101 @@
     </div>
     <div class="content">
         <div class="topcontent">
-            <div class="overview ov1">
-                <h3>Income</h3>
-                <h2>1337$</h2>
+            <div class="overview">
+                <p>Income</p>
+                <h2>7420$</h2>
+                <div class="ovbar ob1"></div>
             </div>
-            <div class="overview ov2">
+            <div class="overview">
                 <p>Outcome</p>
+                <h2>420$</h2>
+                <div class="ovbar ob2"></div>
             </div>
-            <div class="overview ov3">
+            <div class="overview">
                 <p>Something</p>
+                <h2>1689$</h2>
+                <div class="ovbar ob3"></div>
             </div>
-            <div class="overview ov4">
+            <div class="overview">
                 <p>whatwhat</p>
+                <h2>3100$</h2>
+                <div class="ovbar ob4"></div>
+            </div>
+        </div>
+        <div class="mellemcontent">
+            <div class="mellemboxing">
+                <h2>Overview</h2>
+                <div class="saleschart" id="chart_div"></div>
+            </div>
+            <div class="mellemboxing">
+                <h2>New Orders</h2>
+                <div class="orderlist">
+                    <div class="orderdeling">
+                        <p>#</p>
+                        <h4>Name</h4>
+                        <h4>Product</h4>
+                        <h4>Quantity</h4>
+                        <div class="status">
+                            <h4>Status</h4>
+                        </div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>1</p>
+                        <h5>Kendrick Lamar</h5>
+                        <h5>MIC-952</h5>
+                        <h5>3</h5>
+                        <div class="statusdone">DONE</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>2</p>
+                        <h5>Marshall Mathers</h5>
+                        <h5>Notebook</h5>
+                        <h5>50</h5>
+                        <div class="statusdone">DONE</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>3</p>
+                        <h5>Pitbull</h5>
+                        <h5>Hair Growth Elixir</h5>
+                        <h5>15</h5>
+                        <div class="statuspending">Pending</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>4</p>
+                        <h5>Diego Maradona</h5>
+                        <h5>Snow</h5>
+                        <h5>30 kg</h5>
+                        <div class="statusdone">DONE</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>5</p>
+                        <h5>Dj Khaled</h5>
+                        <h5>Lion</h5>
+                        <h5>Another One</h5>
+                        <div class="statuspending">Pending</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>6</p>
+                        <h5>Kanye</h5>
+                        <h5>New Album</h5>
+                        <h5>2</h5>
+                        <div class="statuspending">Pending</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>7</p>
+                        <h5>Leorem</h5>
+                        <h5>Leorem</h5>
+                        <h5>Leorem</h5>
+                        <div class="statuspending">Pending</div>
+                    </div>
+                    <div class="orderdeling">
+                        <p>8</p>
+                        <h5>Leorem</h5>
+                        <h5>Leorem</h5>
+                        <h5>Leorem</h5>
+                        <div class="statuspending">Pending</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -105,6 +192,32 @@
     <script>
         feather.replace()
     </script>
+
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Define the chart to be drawn.
+            var data = google.visualization.arrayToDataTable([
+                ['month', 'income', { role: 'style' } ],
+                ['May', 108.200, 'color: #eb4d4b'],
+                ['June', 75.190, 'color: #f0932b'],
+                ['July', 51.700, 'color: #6ab04c'],
+                ['August', 120.700, 'color: #b2b2b2'],
+                ['October', 23.000, 'color: #4834d4']
+            ]);
+
+            var options = {
+                legend: { position: "none" },
+            };
+
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
 </body>
 
 </html>
